@@ -1,6 +1,6 @@
 /* ==========================================
 
-   A Cut Above Argyll V2
+   A Cut Above Argyll V4
 
    Safe. Reliable. Professional.
 
@@ -24,41 +24,53 @@ html{
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 
-    background:#f8f8f5;
+    background:#f7f7f4;
 
-    color:#2b2b2b;
+    color:#2d2d2d;
 
     line-height:1.6;
 
 }
 
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
 .container{
 
-    width:90%;
-
-    max-width:1200px;
+    width:min(90%,1200px);
 
     margin:auto;
 
 }
 
-/* =========================
+/* ==========================
 
-   Navigation
+   Header
 
-========================= */
+========================== */
 
 header{
 
-    background:#234126;
-
-    position:sticky;
+    position:fixed;
 
     top:0;
 
+    left:0;
+
+    width:100%;
+
+    background:#234126;
+
     z-index:1000;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 
 }
 
@@ -70,46 +82,31 @@ header{
 
     align-items:center;
 
-    padding:20px;
+    padding:15px 5%;
 
 }
 
-.logo {
+.logo img{
 
-    display:flex;
+    height:70px;
 
-    align-items:center;
-
-}
-
-    display: flex;
-
-    align-items: center;
+    width:auto;
 
 }
 
-.logo img {
-
-    height: 70px;
-
-    width: auto;
-
-    display: block;
-
-}
 .nav-links{
 
     display:flex;
 
-    list-style:none;
-
     gap:30px;
+
+    list-style:none;
 
 }
 
 .nav-links a{
 
-    color:white;
+    color:#fff;
 
     text-decoration:none;
 
@@ -121,15 +118,15 @@ header{
 
 .nav-links a:hover{
 
-    color:#9ec64b;
+    color:#b5d46b;
 
 }
 
 .call-btn{
 
-    background:#7fa13b;
+    background:#84a83f;
 
-    color:white;
+    color:#fff;
 
     text-decoration:none;
 
@@ -139,45 +136,71 @@ header{
 
     font-weight:bold;
 
+    transition:.3s;
+
 }
 
 .call-btn:hover{
 
-    background:#6c8d30;
+    background:#6d8d33;
 
 }
 
-/* =========================
+/* ==========================
+
+   Mobile Button
+
+========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
+/* ==========================
 
    Hero
 
-========================= */
+========================== */
 
 .hero{
 
-    min-height:85vh;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    color:white;
+    min-height:100vh;
 
     background:
 
     linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
 
-    url("images/hero.jpg") center/cover;
+    url("images/hero.jpg") center center/cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:120px 20px 80px;
 
 }
 
 .hero-content{
 
-    max-width:800px;
+    max-width:850px;
 
 }
 
@@ -191,19 +214,19 @@ header{
 
 .hero h2{
 
-    color:#b8d86d;
-
-    margin-bottom:20px;
+    color:#b5d46b;
 
     font-size:2rem;
+
+    margin-bottom:20px;
 
 }
 
 .hero p{
 
-    font-size:1.2rem;
+    font-size:1.25rem;
 
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
@@ -219,25 +242,35 @@ header{
 
 }
 
-.btn-primary{
+.btn-primary,
 
-    background:#7fa13b;
+.btn-secondary,
 
-    color:white;
-
-    text-decoration:none;
+.btn-outline{
 
     padding:16px 34px;
 
     border-radius:40px;
 
+    text-decoration:none;
+
     font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:#84a83f;
+
+    color:white;
 
 }
 
 .btn-primary:hover{
 
-    background:#6d8f30;
+    background:#6d8d33;
 
 }
 
@@ -246,14 +279,6 @@ header{
     border:2px solid white;
 
     color:white;
-
-    text-decoration:none;
-
-    padding:16px 34px;
-
-    border-radius:40px;
-
-    font-weight:bold;
 
 }
 
@@ -264,367 +289,19 @@ header{
     color:#234126;
 
 }
-/* ==========================================
 
-   Sections
-
-========================================== */
-
-section{
-
-    padding:90px 0;
-
-}
-
-section h2{
-
-    text-align:center;
-
-    font-size:2.4rem;
-
-    color:#234126;
-
-    margin-bottom:20px;
-
-}
-
-.section-intro{
-
-    text-align:center;
-
-    max-width:700px;
-
-    margin:0 auto 50px;
-
-    color:#666;
-
-    font-size:1.1rem;
-
-}
-
-/* ==========================================
-
-   Why Choose Us
-
-========================================== */
-
-.features-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-    gap:30px;
-
-}
-
-.feature-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:16px;
-
-    text-align:center;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.feature-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.feature-card h3{
-
-    color:#234126;
-
-    margin-bottom:15px;
-
-}
-
-/* ==========================================
-
-   Services
-
-========================================== */
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
-
-}
-
-.service-card{
+.btn-outline{
 
     background:white;
 
-    padding:35px;
-
-    border-radius:16px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.service-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.service-card h3{
-
-    color:#234126;
-
-    margin-bottom:15px;
-
-}
-
-/* ==========================================
-
-   Featured Projects
-
-========================================== */
-
-.projects-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:35px;
-
-}
-
-.project-card{
-
-    background:white;
-
-    overflow:hidden;
-
-    border-radius:18px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.project-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.project-card img{
-
-    width:100%;
-
-    height:240px;
-
-    object-fit:cover;
-
-}
-
-.project-card h3{
-
-    padding:20px 20px 10px;
-
     color:#234126;
 
 }
 
-.project-card p{
+.btn-outline:hover{
 
-    padding:0 20px 25px;
-
-}
-/* ==========================================
-
-   About Section
-
-========================================== */
-
-.about-content{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-    gap:50px;
-
-    align-items:center;
-
-}
-
-.about-image img{
-
-    width:100%;
-
-    max-width:450px;
-
-    display:block;
-
-    margin:auto;
-
-    border-radius:20px;
-
-}
-
-/* ==========================================
-
-   Contact
-
-========================================== */
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:30px;
-
-}
-
-.contact-card{
-
-    background:#fff;
-
-    padding:30px;
-
-    text-align:center;
-
-    border-radius:16px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-}
-
-.contact-card a{
-
-    color:#234126;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-}
-
-.contact-card a:hover{
-
-    color:#7fa13b;
-
-}
-
-/* ==========================================
-
-   Footer
-
-========================================== */
-
-.footer{
-
-    background:#234126;
+    background:#84a83f;
 
     color:white;
-
-    text-align:center;
-
-    padding:60px 20px;
-
-}
-
-.footer h3{
-
-    margin-bottom:15px;
-
-    font-size:2rem;
-
-}
-
-.footer p{
-
-    margin:10px 0;
-
-}
-
-.footer a{
-
-    color:#b8d86d;
-
-    text-decoration:none;
-
-}
-
-.footer a:hover{
-
-    color:white;
-
-}
-
-/* ==========================================
-
-   Mobile
-
-========================================== */
-
-@media (max-width:768px){
-
-    .navbar{
-
-        flex-direction:column;
-
-        gap:20px;
-
-    }
-
-    .nav-links{
-
-        flex-direction:column;
-
-        text-align:center;
-
-        gap:15px;
-
-    }
-
-    .hero h1{
-
-        font-size:2.6rem;
-
-    }
-
-    .hero h2{
-
-        font-size:1.5rem;
-
-    }
-
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
-    section{
-
-        padding:70px 0;
-
-    }
 
 }
