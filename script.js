@@ -1,24 +1,38 @@
-// A Cut Above Argyll V2
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("A Cut Above Argyll Website Loaded");
+    // Mobile Menu
 
-    // Smooth scrolling
+    const menuButton = document.querySelector(".menu-toggle");
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    const navLinks = document.querySelector(".nav-links");
 
-        anchor.addEventListener("click", function(e){
+    menuButton.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+    });
+
+    // Smooth Scroll
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function(e){
 
             e.preventDefault();
 
-            document.querySelector(this.getAttribute("href"))
+            const target = document.querySelector(this.getAttribute("href"));
 
-                .scrollIntoView({
+            if(target){
+
+                target.scrollIntoView({
 
                     behavior:"smooth"
 
                 });
+
+            }
+
+            navLinks.classList.remove("active");
 
         });
 
