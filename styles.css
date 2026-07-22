@@ -251,3 +251,190 @@ header{
     color:#234126;
 
 }
+/* ==========================================
+
+   Sections
+
+========================================== */
+
+section{
+
+    padding:90px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:2.4rem;
+
+    color:#234126;
+
+    margin-bottom:20px;
+
+}
+
+.section-intro{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    color:#666;
+
+    font-size:1.1rem;
+
+}
+
+/* ==========================================
+
+   Why Choose Us
+
+========================================== */
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature-card h3{
+
+    color:#234126;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+
+   Services
+
+========================================== */
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.service-card h3{
+
+    color:#234126;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+
+   Featured Projects
+
+========================================== */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.project-card{
+
+    background:white;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.project-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.project-card h3{
+
+    padding:20px 20px 10px;
+
+    color:#234126;
+
+}
+
+.project-card p{
+
+    padding:0 20px 25px;
+
+}
