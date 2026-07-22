@@ -70,20 +70,23 @@ header{
 
     align-items:center;
 
-    padding:20px 0;
+    padding:20px .logo {
+
+    display: flex;
+
+    align-items: center;
 
 }
 
-.logo{
+.logo img {
 
-    color:#fff;
+    height: 70px;
 
-    font-size:1.6rem;
+    width: auto;
 
-    font-weight:bold;
+    display: block;
 
 }
-
 .nav-links{
 
     display:flex;
