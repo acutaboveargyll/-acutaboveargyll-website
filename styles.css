@@ -70,7 +70,17 @@ header{
 
     align-items:center;
 
-    padding:20px .logo {
+    padding:20px;
+
+}
+
+.logo {
+
+    display:flex;
+
+    align-items:center;
+
+}
 
     display: flex;
 
